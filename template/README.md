@@ -1,10 +1,46 @@
 ## SBT project compiled with Scala 3
 
-This project has be copied from [scala3.g8](https://github.com/scala/scala3.g8) and converted to Zat.
+This project a port of [scala3.g8](https://github.com/scala/scala3.g8) for [Zat](https://github.com/ssanj/zat).
 
-### Usage
+# Usage
 
-This is a normal sbt project. You can compile code with `sbt compile`, run it with `sbt run`, and `sbt console` will start a Scala 3 REPL.
+You can process this template with Zat with the following:
 
-For more information on the sbt-dotty plugin, see the
-[scala3-example-project](https://github.com/scala/scala3-example-project/blob/main/README.md).
+```
+zat process-remote --repository-url https://github.com/ssanj/basic-scala3-zat --target <YOUR_TARGET_DIRECTORY>
+```
+
+Once in `YOUR_TARGET_DIRECTORY`  you can do the steps below.
+
+## Compile
+
+You can compile the code with:
+
+```
+sbt compile
+```
+
+## Run tests
+
+You can run tests with:
+
+```
+sbt test
+```
+
+
+## Interactive console
+
+You can jump into an interactive Scala 3 REPL with:
+
+```
+sbt console
+```
+
+## Variables
+
+|Variable| Description|
+|-|-|
+|`project`| The name of the executable |
+|`scala_3_version`| Scala 3 version. Defaults to `3.3.1` |
+|`munit_version`| munit version. Defaults to `0.7.29` |
