@@ -7,7 +7,7 @@ This project a port of [scala3.g8](https://github.com/scala/scala3.g8) for [Zat]
 You can process this template with Zat with the following:
 
 ```
-zat process-remote --repository-url https://github.com/ssanj/basic-scala3-zat --target <YOUR_TARGET_DIRECTORY>
+zat process-remote --repository-url https://github.com/ssanj/basic-scala3-zat --target-dir <YOUR_TARGET_DIRECTORY>
 ```
 
 ## Variables
