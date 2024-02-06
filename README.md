@@ -1,4 +1,4 @@
-## SBT project compiled with Scala 3
+## Basic Scala 3 Project
 
 This project a port of [scala3.g8](https://github.com/scala/scala3.g8) for [Zat](https://github.com/ssanj/zat).
 

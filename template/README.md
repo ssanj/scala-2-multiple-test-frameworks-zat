@@ -1,4 +1,4 @@
-## SBT project compiled with Scala 3
+## Basic Scala 3 Project
 
 A basic Scala 3 project with a main class and a MUnit test.
 
