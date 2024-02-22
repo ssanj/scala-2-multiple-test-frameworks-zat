@@ -13,12 +13,32 @@
     "variable_name": "scala_3_version",
     "description": "Which version of Scala 3 to use",
     "prompt": "Please enter Scala 3 version to use",
-    "default_value": "3.3.1"
+    "plugin": {
+      "id": "scala-deps",
+      "args":[
+          "-o",
+          "org.scala-lang",
+          "-g",
+          "scala3-library",
+          "-s",
+          "3"
+      ]
+    }
   },
   {
     "variable_name": "munit_version",
     "description": "Which version of MUnit to use",
     "prompt": "Please enter MUnit version to use",
-    "default_value": "0.7.29"
+    "plugin": {
+      "id": "scala-deps",
+      "args":[
+          "-o",
+          "org.scalameta",
+          "-g",
+          "munit",
+          "-s",
+          "2.13"
+      ]
+    }
   }
 ]

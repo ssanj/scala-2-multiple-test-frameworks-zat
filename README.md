@@ -1,13 +1,18 @@
-## Basic Scala 3 Project
+## Basic Scala 3 Project with Latest Dependencies
 
-This project a port of [scala3.g8](https://github.com/scala/scala3.g8) for [Zat](https://github.com/ssanj/zat).
+This project a port of [scala3.g8](https://github.com/scala/scala3.g8) for [Zat](https://github.com/ssanj/zat). This project uses the latest stable versions of [Scala 3](https://www.scala-lang.org) and [MUnit](https://scalameta.org/munit/).
+
+
+# Prerequisites
+
+You need to install the [scala-deps](https://github.com/ssanj/scala-deps-zatp) Zat plugin to use this template. If you don't want to setup `scala-deps` or just want to specify your dependencies manually use the [basic-scala3](https://github.com/ssanj/basic-scala3-zat/) Zat template instead.
 
 # Usage
 
 You can process this template with Zat with the following:
 
 ```
-zat process-remote --repository-url https://github.com/ssanj/basic-scala3-zat --target-dir <YOUR_TARGET_DIRECTORY>
+zat process-remote --repository-url https://github.com/ssanj/basic-scala3-latest-deps-zat --target-dir <YOUR_TARGET_DIRECTORY>
 ```
 
 ## Variables
@@ -15,5 +20,5 @@ zat process-remote --repository-url https://github.com/ssanj/basic-scala3-zat --
 |Variable| Description|
 |-|-|
 |`project`| The name of the executable |
-|`scala_3_version`| Scala 3 version. Defaults to `3.3.1` |
-|`munit_version`| munit version. Defaults to `0.7.29` |
+|`scala_3_version`| Scala 3 version. Defaults to the latest stable version, which can be overridden |
+|`munit_version`| MUnit version. Defaults to the latest stable version, which can be overridden |
