@@ -1,0 +1,25 @@
+{% if test_framework == "scalatest" %}
+import org.scalatest.flatspec.AnyFlatSpec
+// For more information on writing tests, see
+// https://www.scalatest.org/user_guide
+class MySuite extends AnyFlatSpec {
+
+  "An example test should succeed" in {
+    val obtained = 42
+    val expected = 42
+    assert(obtained, expected)
+  }
+}
+{% else %}
+import munit.FunSuite
+// For more information on writing tests, see
+// https://scalameta.org/munit/docs/getting-started.html
+class MySuite extends FunSuite {
+
+  test("example test that succeeds") {
+    val obtained = 42
+    val expected = 42
+    assertEquals(obtained, expected)
+  }
+}
+{% endif %}

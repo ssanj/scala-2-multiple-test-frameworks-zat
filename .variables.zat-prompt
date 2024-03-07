@@ -10,18 +10,33 @@
     ]
   },
   {
-    "variable_name": "scala_3_version",
-    "description": "Which version of Scala 3 to use",
-    "prompt": "Please enter Scala 3 version to use",
+    "variable_name": "test_framework",
+    "description": "Which Scala test framework to use",
+    "prompt": "Please choose your Scala test framework",
+    "choice": [
+      {
+        "display": "ScalaTest",
+        "description": "- The ScalaTest test framework",
+        "value": "scalatest"
+      },
+      {
+        "display": "MUnit",
+        "description": "- The MUnit test framework",
+        "value": "munit"
+      }
+    ]
+  },
+  {
+    "variable_name": "scala_2_version",
+    "description": "Which version of Scala 2 to use",
+    "prompt": "Please enter Scala 2 version to use",
     "plugin": {
       "id": "scala-deps",
       "args":[
           "-o",
           "org.scala-lang",
           "-g",
-          "scala3-library",
-          "-s",
-          "3"
+          "scala-library"
       ]
     }
   },
@@ -36,6 +51,22 @@
           "org.scalameta",
           "-g",
           "munit",
+          "-s",
+          "2.13"
+      ]
+    }
+  },
+  {
+    "variable_name": "scalatest_version",
+    "description": "Which version of ScalaTest to use",
+    "prompt": "Please enter ScalaTest version to use",
+    "plugin": {
+      "id": "scala-deps",
+      "args":[
+          "-o",
+          "org.scalatest",
+          "-g",
+          "scalatest",
           "-s",
           "2.13"
       ]

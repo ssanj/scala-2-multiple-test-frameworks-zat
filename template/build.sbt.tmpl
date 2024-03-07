@@ -1,4 +1,4 @@
-val scala3Version = "$scala_3_version$"
+val scala2Version = "$scala_2_version$"
 
 lazy val root = project
   .in(file("."))
@@ -6,7 +6,10 @@ lazy val root = project
     name := "$project$",
     version := "0.1.0-SNAPSHOT",
 
-    scalaVersion := scala3Version,
-
-    libraryDependencies += "org.scalameta" %% "munit" % "$munit_version$" % Test
+    scalaVersion := scala2Version,
+{% if test_framework == "scalatest" %}
+   libraryDependencies += "org.scalatest" %% "scalatest" % "$scalatest_version$" % Test
+{% else %}
+   libraryDependencies += "org.scalameta" %% "munit" % "$munit_version$" % Test
+{% endif %}
   )
