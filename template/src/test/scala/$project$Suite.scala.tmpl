@@ -1,20 +1,22 @@
-{% if test_framework == "scalatest" %}
+{%- if test_framework == "scalatest" -%}
 import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
+
 // For more information on writing tests, see
 // https://www.scalatest.org/user_guide
-class MySuite extends AnyFlatSpec {
+class $project$Suite extends AnyFlatSpec with Matchers {
 
-  "An example test should succeed" in {
+  "An example test" should "succeed" in {
     val obtained = 42
     val expected = 42
-    assert(obtained, expected)
+    obtained shouldEqual expected
   }
 }
-{% else %}
+{%- else -%}
 import munit.FunSuite
 // For more information on writing tests, see
 // https://scalameta.org/munit/docs/getting-started.html
-class MySuite extends FunSuite {
+class $project$Suite extends FunSuite {
 
   test("example test that succeeds") {
     val obtained = 42

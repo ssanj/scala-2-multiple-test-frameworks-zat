@@ -13,7 +13,7 @@
     "variable_name": "test_framework",
     "description": "Which Scala test framework to use",
     "prompt": "Please choose your Scala test framework",
-    "choice": [
+    "choices": [
       {
         "display": "ScalaTest",
         "description": "- The ScalaTest test framework",
@@ -41,6 +41,20 @@
     }
   },
   {
+    "variable_name": "sbt_version",
+    "description": "Which version of SBT to use",
+    "prompt": "Please enter SBT version to use",
+    "plugin": {
+      "id": "scala-deps",
+      "args":[
+          "-o",
+          "org.scala-sbt",
+          "-g",
+          "sbt"
+      ]
+    }
+  },
+  {
     "variable_name": "munit_version",
     "description": "Which version of MUnit to use",
     "prompt": "Please enter MUnit version to use",
@@ -54,7 +68,13 @@
           "-s",
           "2.13"
       ]
-    }
+    },
+    "scopes": [
+      {
+        "choice": "test_framework",
+        "value": "munit"
+      }
+    ]
   },
   {
     "variable_name": "scalatest_version",
@@ -70,6 +90,12 @@
           "-s",
           "2.13"
       ]
-    }
+    },
+    "scopes": [
+      {
+        "choice": "test_framework",
+        "value": "scalatest"
+      }
+    ]
   }
 ]
